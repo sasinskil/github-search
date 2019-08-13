@@ -1,5 +1,6 @@
 $background: #2f3238;
 $white: #fff;
+$mobile: 640px;
 
 @mixin buttonDesign($borderBold, $borderStyle, $borderColor) {
     border: $borderBold $borderStyle $borderColor;
