@@ -16,7 +16,9 @@ if ('serviceWorker' in navigator) {
 
 // place your code below
 
-
-console.log(`Hello world!`);
-
+const mainHeader = document.querySelector('.heading--js');
+const searchInput = document.querySelector('.search__input--js');
+const resultsContainer = document.querySelector('.results--js');
+const resultsList = document.querySelector('.results__list--js');
+const searchAgainButton = document.querySelector('.results__button--js');
 
