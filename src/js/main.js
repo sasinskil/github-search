@@ -40,7 +40,7 @@ const findRepositories = () => {
       const {name, homepage} = repo;
       
       if(homepage) {
-        resultsList.innerHTML += `<li class="item"><strong>Repo name</strong> ${name} <strong>Live</strong> <a class="results__link" href="${homepage}">Click!</a></li>`
+        resultsList.innerHTML += `<li class="results__item"><strong results__item--strong>Repo name</strong> ${name} <strong>Live</strong> <a class="results__link" href="${homepage}">Click!</a></li>`
     } else {
       resultsList.innerHTML += `<li class="results__item"><strong class="results__item--strong">Repo name</strong> ${name}</li>`
     }

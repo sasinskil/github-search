@@ -45,7 +45,7 @@ body {
 
   &__title {
     margin: 0;
-    padding: 0 0 0.3rem 0;
+    padding: 0 0 0.5rem 0;
   }
 
   &__span {
@@ -54,7 +54,7 @@ body {
 
   &__search,
   .search {
-    margin: 4rem 0;
+    margin: 7rem 0;
     display: block;
     width: 100%;
     display: flex;
@@ -71,7 +71,7 @@ body {
       border: none;
       width: 300px;
       padding: 0.7rem;
-      border-bottom: 0.1rem solid $white;
+      border-bottom: 0.09rem solid $white;
       text-align: center;
       margin-bottom: 2rem;
       transition: box-shadow 0.4s ease-in-out;
@@ -101,7 +101,25 @@ body {
   }
 
   &__title {
-    margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 5rem;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 50%;
+      margin: 0.5rem auto;
+      border-bottom: 0.09rem solid lightgray;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   &__list {
@@ -111,10 +129,11 @@ body {
   }
 
   &__item {
-    padding: 0.7rem 2rem;
+    padding: 1rem 4rem;
 
     &:nth-child(even) {
       opacity: 0.7;
+      text-align: right;
     }
 
     &--strong {
@@ -137,26 +156,26 @@ body {
     color: $white;
     font-size: 0.9rem;
     font-weight: bold;
-    margin: 2rem 0;
+    margin: 3rem 0;
     padding: 0.5rem 2rem;
     position: relative;
     transition: color 0.6s ease-in-out;
-    z-index:1;
-    
+    z-index: 1;
+
     &:hover {
       color: $background;
     }
-    
+
     &:hover::before {
       width: 50%;
       transform: translatex(-10%);
     }
-    
+
     &:hover::after {
       width: 50%;
       transform: translatex(-90%);
     }
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -167,9 +186,9 @@ body {
       transform: translatex(-10%);
       background: $white;
       transition: width 0.6s ease-in-out;
-      z-index:-1;
+      z-index: -1;
     }
-   
+
     &::after {
       content: "";
       position: absolute;
@@ -180,7 +199,7 @@ body {
       transform: translatex(-90%);
       background: $white;
       transition: width 0.6s ease-in-out;
-      z-index:-1;
+      z-index: -1;
     }
   }
 }
