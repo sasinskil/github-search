@@ -364,12 +364,12 @@ body {
     display: none; }
   .heading__title {
     margin: 0;
-    padding: 0 0 0.3rem 0; }
+    padding: 0 0 0.5rem 0; }
   .heading__span {
     font-style: italic; }
   .heading__search,
   .heading .search {
-    margin: 4rem 0;
+    margin: 7rem 0;
     display: block;
     width: 100%;
     display: -webkit-box;
@@ -391,7 +391,7 @@ body {
       border: none;
       width: 300px;
       padding: 0.7rem;
-      border-bottom: 0.1rem solid #fff;
+      border-bottom: 0.09rem solid #fff;
       text-align: center;
       margin-bottom: 2rem;
       -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
@@ -441,15 +441,39 @@ body {
   .results--visible {
     opacity: 1; }
   .results__title {
-    margin-bottom: 3rem; }
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 5rem; }
+    .results__title::after {
+      content: "";
+      display: block;
+      width: 50%;
+      margin: 0.5rem auto;
+      border-bottom: 0.09rem solid lightgray; }
+  .results__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .results__list {
     max-height: 500px;
     overflow: auto;
     list-style: none; }
   .results__item {
-    padding: 0.7rem 2rem; }
+    padding: 1rem 4rem; }
     .results__item:nth-child(even) {
-      opacity: 0.7; }
+      opacity: 0.7;
+      text-align: right; }
     .results__item--strong {
       font-weight: bold;
       font-size: 1.1rem; }
@@ -465,7 +489,7 @@ body {
     color: #fff;
     font-size: 0.9rem;
     font-weight: bold;
-    margin: 2rem 0;
+    margin: 3rem 0;
     padding: 0.5rem 2rem;
     position: relative;
     -webkit-transition: color 0.6s ease-in-out;
