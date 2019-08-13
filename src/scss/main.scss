@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #2f3238;
+  background: $background;
   opacity: 0.4;
   height: 100vh;
   padding: 1rem;
@@ -26,7 +26,7 @@ body {
 }
 
 .main {
-  color: #fff;
+  color: $white;
   max-width: 500px;
   width: 100%;
   display: flex;
@@ -66,17 +66,22 @@ body {
     }
 
     &__input {
-      color: #fff;
+      color: $white;
       background: none;
       border: none;
       width: 300px;
       padding: 0.7rem;
-      border-bottom: 0.1rem solid #fff;
+      border-bottom: 0.1rem solid $white;
       text-align: center;
       margin-bottom: 2rem;
+      transition: box-shadow 0.4s ease-in-out;
+
+      &:focus {
+        box-shadow: 0px 0px 10px 1px;
+      }
 
       &::placeholder {
-        color: #fff;
+        color: $white;
       }
     }
   }
@@ -89,7 +94,7 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.7s;
+  transition: opacity 0.7s ease-in-out;
 
   &--visible {
     opacity: 1;
@@ -121,25 +126,25 @@ body {
   &__link {
     text-decoration: none;
     font-style: italic;
-    border-bottom: 1px solid #fff;
-    color: #fff;
+    border-bottom: 1px solid $white;
+    color: $white;
   }
 
   &__button {
     border: none;
     background: none;
-    border: 2px solid #fff;
-    color: #fff;
+    @include buttonDesign(2px, solid, $white);
+    color: $white;
     font-size: 0.9rem;
     font-weight: bold;
     margin: 2rem 0;
     padding: 0.5rem 2rem;
     position: relative;
-    transition: color 0.6s;
+    transition: color 0.6s ease-in-out;
     z-index:1;
     
     &:hover {
-      color: #2f3238;
+      color: $background;
     }
     
     &:hover::before {
@@ -160,8 +165,8 @@ body {
       height: 100%;
       width: 0%;
       transform: translatex(-10%);
-      background: #fff;
-      transition: width 0.6s;
+      background: $white;
+      transition: width 0.6s ease-in-out;
       z-index:-1;
     }
    
@@ -173,8 +178,8 @@ body {
       height: 100%;
       width: 0%;
       transform: translatex(-90%);
-      background: #fff;
-      transition: width 0.6s;
+      background: $white;
+      transition: width 0.6s ease-in-out;
       z-index:-1;
     }
   }
