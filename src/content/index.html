@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Github Search</title>
-    <meta name="description" content="Find your friend" />
 
-    <!-- Title -->
-    <meta property="og:title" content="Github Search" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="Find your friend" />
-    <!-- full url with http(s) ie. full repo path -->
-    <meta property="og:url" content="https://sasinskil.github.io/github-search/" />
-    <!-- full url to the image with http(s) ie. full repo + cover.png path Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://sasinskil.com/github-search/assets/img/cover.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Github Search</title>
+  <meta name="description" content="Find your friend" />
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <!-- <link
+  <!-- Title -->
+  <meta property="og:title" content="Github Search" />
+  <!-- OPTIONAL description. 2-4 sentences. -->
+  <meta property="og:description" content="Find your friend" />
+  <!-- full url with http(s) ie. full repo path -->
+  <meta property="og:url" content="https://sasinskil.github.io/github-search/" />
+  <!-- full url to the image with http(s) ie. full repo + cover.png path Facebook suggests at least 1200 x 630. -->
+  <meta property="og:image" content="https://sasinskil.github.io/github-search/assets/img/cover.png" />
+
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- <link
       rel="apple-touch-icon"
       sizes="192x192"
       href="assets/pwa/icons/icon-192x192.png"
@@ -30,11 +31,31 @@
       href="assets/pwa/icons/icon-192x192.png"
     /> -->
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
 
-    <script src="js/main.js"></script>
-  </body>
+<body>
+  <main class="main">
+    <header class="heading">
+      <h1 class="heading__title">Github Search</h1>
+      <span class="heading__span">find your friend</span>
+      <div class="heading__search search">
+        <p class="search__wrapper">
+          <label class="search__label" for="user-name"><br>
+            <input class="search__input" id="user-name" name="user-name" type="text" placeholder="type user name..."></label>
+        </p>
+      </div>
+    </header>
+    <section class="results">
+      <h2 class="results__title">Your results</h2>
+      <div class="results__content">
+        <ul class="results__list"></ul>
+        <button class="results__button">Try again</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>
