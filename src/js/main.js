@@ -26,7 +26,7 @@ const searchAgainButton = document.querySelector('.results__button--js');
 const findRepositories = () => {
   const searchInputValue = searchInput.value;
 
-  fetch(`https://api.github.com/users/${searchInputValue}/repos`)
+  fetch(`https://api.github.com/users/${searchInputValue}/repos?sort=created&direction=desc`)
   .then(resp => resp.json())
   .then(resp => {
     const repos = resp;
@@ -46,7 +46,7 @@ const findRepositories = () => {
     }
     }
 })
-  .catch(err => alert(`Nie znaleziono użytkownika ${searchInputValue}, ${err}`));
+  .catch(err => alert(`User not found ${searchInputValue}, ${err}`));
   searchInput.value="";
 }
 
