@@ -323,7 +323,7 @@ body {
   font-family: "Open Sans", sans-serif;
   background: #2f3238;
   opacity: 0.4;
-  height: 100vh;
+  min-height: 100vh;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -490,8 +490,8 @@ body {
     color: #fff;
     font-size: 0.9rem;
     font-weight: bold;
-    margin: 3rem 0;
-    padding: 0.5rem 2rem;
+    margin: 3.5rem 0;
+    padding: 0.5rem 3rem;
     position: relative;
     -webkit-transition: color 0.5s ease-in-out;
     -o-transition: color 0.5s ease-in-out;
@@ -547,11 +547,12 @@ body {
   .results__title {
     margin-bottom: 2rem; }
   .results__list {
-    max-height: 280px; }
+    max-height: 320px; }
   .results__item {
-    padding: 0.6rem 3rem; }
+    padding: 0.6rem 3rem;
+    margin-bottom: 1rem; }
   .results__button {
-    margin: 1rem 0 4rem 0;
-    padding: 0.6rem 5rem; } }
+    margin: 3rem 0 4rem 0;
+    padding: 0.6rem 3rem; } }
 
 /*# sourceMappingURL=main.css.map */
