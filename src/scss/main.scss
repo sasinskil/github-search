@@ -26,8 +26,9 @@ body {
 }
 
 .main {
+  position: relative;
   color: $white;
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -45,7 +46,7 @@ body {
 
   &__title {
     margin: 0;
-    padding: 0 0 0.4rem 0;
+    padding: 0 0 0.4rem;
   }
 
   &__span {
@@ -54,7 +55,7 @@ body {
 
   &__search,
   .search {
-    margin: 8rem 0;
+    margin: 8rem 0 0;
     display: block;
     width: 100%;
     display: flex;
@@ -101,20 +102,23 @@ body {
 
   &__title {
     text-align: center;
-    width: 100%;
     font-size: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    position: relative;
 
     &::after {
       content: "";
       display: block;
-      width: 50%;
-      margin: 0.5rem auto;
-      border-bottom: 0.09rem solid lightgray;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      border-bottom: 0.1rem solid lightgray;
     }
   }
 
   &__content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -122,13 +126,18 @@ body {
   }
 
   &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 1rem;
+    padding: 0;
     max-height: 500px;
     overflow: auto;
     list-style: none;
   }
 
   &__item {
-    padding: 1rem 4rem;
+    padding: 1rem;
 
     &:nth-child(even) {
       opacity: 0.7;
@@ -156,7 +165,7 @@ body {
     font-size: 0.9rem;
     font-weight: bold;
     margin: 3.5rem 0;
-    padding: 0.5rem 3rem;
+    padding: 0.7rem 3rem;
     position: relative;
     transition: color 0.5s ease-in-out;
     z-index: 1;
@@ -203,7 +212,47 @@ body {
   }
 }
 
+.lds-dual-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 4rem;
+  height: 4rem;
+
+  &--visible {
+    display: block;
+  }
+}
+.lds-dual-ring::after {
+  content: " ";
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 @media screen and (max-width: $mobile) {
+
+  html {
+    font-size: 12px;
+  }
+
   .heading {
     
     &__search,
@@ -221,11 +270,6 @@ body {
 
     &__list {
       max-height: 320px;
-    }
-
-    &__item {
-      padding: 0.6rem 3rem;
-      margin-bottom: 1rem;
     }
 
     &__button {
