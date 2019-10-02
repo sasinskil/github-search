@@ -1,4 +1,4 @@
-![Main page](github/main.PNG) ![Results](github/results.PNG)
+![Main page](github/main.PNG)
 
 # I present an application that will help you find repositories of a selected github user.
 
